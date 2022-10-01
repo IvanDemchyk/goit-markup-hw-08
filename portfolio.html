@@ -16,11 +16,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
+      <div class="container page-header__container">
         <nav class="page-navigation">
           <a class="logo link" href="./index.html"
             ><span class="logo-part">Web</span>Studio</a
@@ -37,7 +36,7 @@
             <li><a class="menu__link link" href="#contacts">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="list menu-contacts">
+        <ul class="menu-contacts list">
           <li>
             <a class="mail-link link" href="mailto:info@devstudio.com">
               <svg class="mail-svg">
@@ -55,6 +54,69 @@
             >
           </li>
         </ul>
+        <button type="button" class="open-mobile-menu-btn" data-menu-open>
+          <svg class="burger-icon">
+            <use href="./images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="mobile-list__wrapper">
+            <ul class="mobile-list list">
+              <li class="mobile-list__item">
+                <a href="index.html" class="mobile-list__link link">Студія</a>
+              </li>
+              <li class="mobile-list__item">
+                <a href="portfolio.html" class="mobile-list__link link current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-list__item">
+                <a href="#" class="mobile-list__link link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-contacts__wrapper">
+            <ul class="mobile-contacts list">
+              <li class="mobile-contacts__item">
+                <a href="tel:+380961111111" class="mobile-contacts__phone link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-contacts__mail link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="mobile-contacts__item">
+                <div class="mobile-social__wrapper">
+                  <ul class="mobile-social list">
+                    <li class="mobile-social__item">
+                      <a href="#" class="mobile-social-link link">Instagram</a>
+                    </li>
+                    <li class="mobile-social__item">
+                      <a href="#" class="mobile-social-link link">Twitter</a>
+                    </li>
+                    <li class="mobile-social__item">
+                      <a href="#" class="mobile-social-link link">Facebook</a>
+                    </li>
+                    <li class="mobile-social__item">
+                      <a href="#" class="mobile-social-link link">LinkedIn</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -91,13 +153,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-1.jpg"
-                    alt="Проект веб-сайту"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-1.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-1.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-1.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-1@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/images-portfolio/images-mobile/project-1.jpg"
+                      alt="Проект веб-сайту"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -113,13 +196,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-2.jpg"
-                    alt="Постер із футболістами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-2.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-2.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-2.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-2@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/images-portfolio/images-mobile/project-2.jpg"
+                      alt="Постер із футболістами"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -137,13 +241,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-3.jpg"
-                    alt="Проект ресторану"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-3.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-3@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-3.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-3.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-3@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/images-portfolio/images-mobile/project-3.jpg"
+                      alt="Проект ресторану"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -161,12 +286,33 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-4.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-4.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-4.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-4@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                  </picture>
                   <img
                     class="portfolio-img"
-                    src="./images/images-portfolio/project-4.jpg"
+                    src="./images/images-portfolio/images-mobile/project-4.jpg"
                     alt="Проект маркетингу"
-                    width="370"
-                    height="294"
                   />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -185,13 +331,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-5.jpg"
-                    alt="Проект додатку"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-5.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-5.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-5.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-5@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images//images-portfolio/images-mobile/project-5.jpg"
+                      alt="Проект додатку"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -209,12 +376,33 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-6.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-6.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-6.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-6@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                  </picture>
                   <img
                     class="portfolio-img"
-                    src="./images/images-portfolio/project-6.jpg"
+                    src="./images/images-portfolio/images-mobile/project-6.jpg"
                     alt="Проект веб-сайту"
-                    width="370"
-                    height="294"
                   />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -233,13 +421,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-7.jpg"
-                    alt="Проект Дизайну"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-7.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-7.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-7.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-7@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/images-portfolio/images-mobile/project-7.jpg"
+                      alt="Проект Дизайну"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -257,13 +466,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-8.jpg"
-                    alt="Проект маркетингу"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-8.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-8.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-8.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-8@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/images-portfolio/images-mobile/project-8.jpg"
+                      alt="Проект маркетингу"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -281,13 +511,34 @@
             <li class="portfolio-list-item">
               <a class="portfolio-box-link link" href="#">
                 <div class="overlay-wrapper">
-                  <img
-                    class="portfolio-img"
-                    src="./images/images-portfolio/project-9.jpg"
-                    alt="Проект додатку"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-desktop/project-9.jpg    1x,
+                        ./images/images-portfolio/images-desktop/project-9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-tablet/project-9.jpg    1x,
+                        ./images/images-portfolio/images-tablet/project-9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/images-portfolio/images-mobile/project-9.jpg    1x,
+                        ./images/images-portfolio/images-mobile/project-9@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-img"
+                      src="./images/images-portfolio/images-mobile/project-9.jpg"
+                      alt="Проект додатку"
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -305,8 +556,8 @@
       </section>
     </main>
     <footer class="footer" id="contacts">
-      <div class="container">
-        <div class="footer-contacts-wrapper">
+      <div class="footer__container container">
+        <div class="footer-contacts__wrapper">
           <div class="footer-address">
             <a class="logo link" href="./index.html"
               ><span class="logo-part-footer">Web</span>Studio</a
@@ -337,7 +588,7 @@
             </address>
           </div>
           <div class="footer-social">
-            <h2 class="footer-title">Приєднуйтесь</h2>
+            <h2 class="footer__title">Приєднуйтесь</h2>
             <ul class="footer-icons-list list">
               <li class="footer-icons-item">
                 <a href="#" class="footer-link link">
@@ -371,8 +622,8 @@
           </div>
         </div>
         <div class="footer-form-wrapper">
-          <h2 class="footer-title">Підпишіться на розсилку</h2>
-          <form class="footer-form">
+          <h2 class="form__title">Підпишіться на розсилку</h2>
+          <form class="footer__form">
             <label class="footer-form-field">
               <input
                 type="email"
@@ -392,5 +643,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

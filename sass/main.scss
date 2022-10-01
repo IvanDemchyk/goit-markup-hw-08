@@ -5,11 +5,13 @@
 @import "./base/section";
 @import "./base/container";
 
+@import "./components/mobile-menu";
 @import "./components/section-title";
 @import "./components/logo";
 @import "./components/backdrop";
 @import "./components/modal";
 @import "./components/modal-form";
+@import "./components/link-current";
 
 @import "./layout/header";
 @import "./layout/hero";
