@@ -14,26 +14,24 @@
   color: var(--accent-color);
 }
 
-@media screen and (max-width: 767px) {
-  .menu {
-    display: none;
-  }
+.menu {
+  display: none;
+}
 
-  .menu-contacts {
-    display: none;
-  }
+.menu-contacts {
+  display: none;
+}
 
-  .open-mobile-menu-btn {
-    line-height: 0;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-  }
+.open-mobile-menu-btn {
+  line-height: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
 
-  .burger-icon {
-    width: 40px;
-    height: 40px;
-  }
+.burger-icon {
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -83,11 +81,15 @@
     }
   }
 
-  .mail-link,
-  .phone-link {
+  .menu-contacts {
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 8px;
+  }
+
+  .mail-link,
+  .phone-link {
     font-weight: 500;
     font-size: 12px;
     line-height: 1.17;
@@ -135,7 +137,7 @@
   }
 
   .menu-contacts {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 50px;
   }
@@ -164,8 +166,4 @@
     width: 10px;
     height: 16px;
   }
-
-
 }
-
-

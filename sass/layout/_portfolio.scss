@@ -93,10 +93,10 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio-list-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -108,9 +108,8 @@
   }
 
   .portfolio-list {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
   }
 
   .portfolio-list-item {

@@ -56,17 +56,16 @@
   fill: var(--logo-color);
 }
 
-@media screen and (max-width: 767px) {
-  .team__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.team__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .team__list {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
   }
 
   .team__item {
@@ -101,5 +100,3 @@
     }
   }
 }
-
-
